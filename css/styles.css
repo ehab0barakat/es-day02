@@ -1,0 +1,64 @@
+.navbar-brand img{
+    width: 60px ;
+    animation: rotatez infinite 10s linear ;
+}
+@keyframes rotatez {
+    100% {transform: rotateZ(360deg);}
+} 
+.active{
+    background: brown;
+    color:white !important;
+}
+
+.songs .father{
+    
+    transform-style: preserve-3d;
+    animation: rotatey infinite 20s ease-out ;
+    box-shadow: 0 0 0 black;
+}
+
+.songs .father p:nth-child(1){
+    position: absolute;
+    background: transparent;
+    background: #f8f9fa;
+}
+.songs .father p:nth-child(2){
+    backface-visibility: hidden;
+    background: #f8f9fa;
+    transform: rotatey(180deg);
+}
+
+
+@keyframes rotatey {
+    100% {transform: rotatey(-180deg);}
+} 
+
+
+
+.auto-type{
+    font-size:60px;
+    text-align:center;
+    position:relative
+}
+.auto-type::after{
+    content: "";
+    width: 5px;
+    height: 60%;
+    background: black;
+    position: absolute;
+    /* top: 20%; */
+    margin: 25px 0 0 10px  ;
+    animation: hiding 1s infinite linear both ;
+}
+
+
+@keyframes hiding{
+
+    50%{
+        background:white
+    }
+    100%{
+        background:black
+    }
+
+}
